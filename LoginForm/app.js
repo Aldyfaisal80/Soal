@@ -7,7 +7,7 @@ const tombolSubmit = document.getElementById('submitBtn'); // Tombol submit form
 const pesanError = document.getElementById('validationMessages'); // Tempat menampilkan pesan error
 
 // Fungsi untuk mengecek kekuatan password
-function cekPassword(password) {
+const cekPassword = (password) => {
     let kekuatan = 0; // Nilai awal kekuatan password
     let pesan = []; // Array untuk menyimpan pesan error
 
@@ -47,10 +47,10 @@ function cekPassword(password) {
     }
 
     return { kekuatan, pesan }; // Mengembalikan nilai kekuatan dan pesan error
-}
+};
 
 // Fungsi untuk memperbarui tampilan berdasarkan password yang diinput
-function updateTampilan(password) {
+const updateTampilan = (password) => {
     const hasil = cekPassword(password); // Mengecek password menggunakan fungsi cekPassword
     
     // Menampilkan pesan error dengan styling CSS
@@ -87,7 +87,7 @@ function updateTampilan(password) {
         tombolSubmit.disabled = true; // Non-aktifkan tombol
         tombolSubmit.className = 'w-full py-2 px-4 rounded text-white bg-gray-400';
     }
-}
+};
 
 // Event listener saat user mengetik password
 passwordInput.addEventListener('input', (e) => {
