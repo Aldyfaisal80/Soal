@@ -3,6 +3,7 @@ const todoForm = document.getElementById('todoForm');
 const todoInput = document.getElementById('todoInput');
 const todoList = document.getElementById('todoList');
 const submitButton = document.getElementById('submitButton');
+const resetButton = document.getElementById('resetButton');
 
 // 2. Array untuk menyimpan todos dan editId
 let todos = [];
@@ -34,7 +35,7 @@ todoForm.addEventListener('submit', handleSubmit);
 // 4. Fungsi untuk menambah todo
 const addTodo = (text) => {
     todos.push({
-        id: Date.now(),
+        id: Date.now(), 
         text: text,
         completed: false,
     });
@@ -110,3 +111,8 @@ const deleteTodo = (id) => {
     todos = todos.filter(todo => todo.id !== id);
     renderTodos();
 };
+
+const todosReset = () => {
+    todos = [];
+    renderTodos();
+}
