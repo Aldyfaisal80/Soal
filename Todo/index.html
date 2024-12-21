@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100 min-h-screen py-10">
+        <div class="container mx-auto max-w-md px-4">
+            <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Todo List</h1>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <form id="todoForm" class="flex gap-2">
+                    <input
+                        type="text"
+                        id="todoInput"
+                        class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                        placeholder="Add new task..." />
+                    <button
+                        type="submit"
+                        id="submitButton"
+                        class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition duration-200">
+                        Add
+                    </button>
+                </form>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md">
+                <ul id="todoList" class="divide-y divide-gray-200">
+                    <!-- Todos akan ditampilkan di sini -->
+                </ul>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
